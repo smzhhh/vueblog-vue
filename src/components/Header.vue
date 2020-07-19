@@ -1,15 +1,16 @@
 <template>
     <div class="m-content">
-      header
-      <h3>欢迎来到MarkerHub的博客</h3>
+      <h3>欢迎来到Harold技术实验室</h3>
       <div class="block">
-        <el-avatar :size="50" :src="user.avatar"></el-avatar>
+        <el-avatar shape="square" :size="50" :src="user.avatar"></el-avatar>
         <div>{{user.username}}</div>
       </div>
       <div class="maction">
         <span><el-link href="/blogs">主页</el-link></span>
         <el-divider direction="vertical"></el-divider>
         <span><el-link type="success" href="/blog/add">发表博客</el-link></span>
+        <el-divider direction="vertical"></el-divider>
+        <span><el-link type="success" href="/ships">船只列表</el-link></span>
         <el-divider direction="vertical"></el-divider>
         <span v-show="!hasLogin"><el-link type="primary" href="/login">登录</el-link></span>
 
@@ -25,7 +26,7 @@
         return {
           user:{
             username: '请先登录',
-            avatar: 'https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png'
+            avatar: require('../assets/default.jpg')
           },
           hasLogin: false
         }

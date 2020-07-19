@@ -80,7 +80,7 @@
       },
       created() {
         const blogId = this.$route.params.blogId
-        console.log(blogId)
+        //console.log(blogId)
         const _this = this
         if(blogId) {
           this.$axios.get('/blog/' + blogId).then(res => {
@@ -91,7 +91,6 @@
             _this.ruleForm.content = blog.content
           })
         }
-
       }
     }
 </script>

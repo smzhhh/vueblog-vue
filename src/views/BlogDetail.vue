@@ -33,7 +33,7 @@
       },
       created() {
         const blogId = this.$route.params.blogId
-        console.log(blogId)
+        //console.log(blogId)
         const _this = this
         this.$axios.get('/blog/' + blogId).then(res => {
           const blog = res.data.data

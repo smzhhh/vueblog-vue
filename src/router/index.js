@@ -4,6 +4,9 @@ import Login from '../views/Login.vue'
 import Blogs from '../views/Blogs.vue'
 import BlogEdit from '../views/BlogEdit.vue'
 import BlogDetail from '../views/BlogDetail.vue'
+import Ships from '../views/Ships.vue'
+import ShipEdit from '../views/ShipEdit.vue'
+
 
 Vue.use(Router)
 
@@ -16,14 +19,14 @@ export default new Router({
       redirect:{name: "Blogs"}
     },
     {
-      path: '/blogs',
-      name: 'Blogs',
-      component: Blogs
-    },
-    {
       path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/blogs',
+      name: 'Blogs',
+      component: Blogs
     },
     {
       path: '/blog/add',
@@ -45,8 +48,28 @@ export default new Router({
       meta: {
         requireAuth: true
       }
+    },
+    {
+      path: '/ships',
+      name: 'Ships',
+      component: Ships
+    },
+    {
+      path: '/ship/add',
+      name: 'ShipAdd',
+      component: ShipEdit,
+      meta: {
+        requireAuth: true
+      }
+    },
+    {
+      path: '/ship/:shipId/edit',
+      name: 'ShipEdit',
+      component: ShipEdit,
+      meta: {
+        requireAuth: true
+      }
     }
-
   ]
 
 })
