@@ -6,6 +6,7 @@ import BlogEdit from '../views/BlogEdit.vue'
 import BlogDetail from '../views/BlogDetail.vue'
 import Ships from '../views/Ships.vue'
 import ShipEdit from '../views/ShipEdit.vue'
+import Index from '../views/Index.vue'
 
 
 Vue.use(Router)
@@ -16,7 +17,12 @@ export default new Router({
     {
       path: '/',
       name: 'Index',
-      redirect:{name: "Blogs"}
+      redirect:{name: "Index"}
+    },
+    {
+      path: '/index',
+      name: 'Index',
+      component: Index
     },
     {
       path: '/login',
@@ -59,7 +65,7 @@ export default new Router({
       name: 'ShipAdd',
       component: ShipEdit,
       meta: {
-        requireAuth: true
+        requireAuth: true //需要登录才能访问
       }
     },
     {
@@ -67,7 +73,13 @@ export default new Router({
       name: 'ShipEdit',
       component: ShipEdit,
       meta: {
-        requireAuth: true
+        requireAuth: true //需要登录才能访问
+      }
+    },
+    {
+      path: '/ship/delete/:shipId',
+      meta: {
+        requireAuth: true //需要登录才能访问
       }
     }
   ]

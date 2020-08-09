@@ -1,6 +1,8 @@
 <template>
   <div class="mcontaner">
-    <Header></Header>
+    <div class="el-header">
+      <Header></Header>
+    </div>
     <div class="block">
       <el-timeline>
         <el-timeline-item :timestamp="blog.created" placement="top" v-for="blog in blogs">
@@ -62,6 +64,9 @@
 </script>
 
 <style scoped>
+  .el-header{
+    margin: 5px auto 40px;
+  }
   .mpage {
     margin: 0 auto;
     text-align: center;

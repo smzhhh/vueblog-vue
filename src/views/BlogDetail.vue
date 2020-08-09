@@ -16,7 +16,7 @@
 </template>
 
 <script>
-  import Header from "../components/Header";
+  import Header from "../components/Header_old";
   import 'github-markdown-css'
     export default {
       name: "BlogDetail",
