@@ -7,7 +7,7 @@ import BlogDetail from '../views/BlogDetail.vue'
 import Ships from '../views/Ships.vue'
 import ShipEdit from '../views/ShipEdit.vue'
 import Index from '../views/Index.vue'
-
+import Test from '../views/Test.vue'
 
 Vue.use(Router)
 
@@ -15,9 +15,8 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
-      name: 'Index',
-      redirect:{name: "Index"}
+      path: '',
+      redirect: Index
     },
     {
       path: '/index',
@@ -81,7 +80,12 @@ export default new Router({
       meta: {
         requireAuth: true //需要登录才能访问
       }
-    }
+    },
+    {
+      path: '/test',
+      name: 'Test',
+      component: Test
+    },
   ]
 
 })

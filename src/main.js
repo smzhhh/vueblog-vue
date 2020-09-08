@@ -11,6 +11,7 @@ import "./axios"
 import "./permission"
 import mavonEditor from 'mavon-editor'
 import 'mavon-editor/dist/css/index.css'
+import '@/common/stylus/index.styl'
 
 
 Vue.use(Element)
