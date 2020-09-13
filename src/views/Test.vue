@@ -3,7 +3,10 @@
     <div class="el-header">
       <Header></Header>
     </div>
-    <div>
+    <div class="el-about">
+      <About></About>
+    </div>
+    <div class="el-blogs">
       <el-row class="el-row" v-for="blog in blogs" align="top">
         <el-card :body-style="{ margin: '0px', padding: '0px', width: '350px', height: '150px' }">
           <h4>
@@ -23,9 +26,11 @@
 
 <script type="text/ecmascript-6">
   import Header from "../components/Header";
+  import About from "../components/About";
+
   export default {
     name: "Test",
-    components: {Header},
+    components: {Header, About},
     data(){
       return {
         blogs: {},
@@ -55,43 +60,15 @@
   .el-header{
     margin: 5px auto 40px;
   }
+  .el-blogs{
+    background: yellow;
+
+    /*margin: 100px 10px 50px 20px;*/
+  }
   .el-row{
-    width: 600px;
+    width: 800px;
     height: 200px;
   }
-  .mpage {
-    margin: 0 auto;
-    text-align: center;
-  }
 
-  .time {
-    font-size: 13px;
-    color: #999;
-  }
-
-  .bottom {
-    margin-top: 13px;
-    line-height: 12px;
-  }
-
-  .button {
-    padding: 0;
-    float: right;
-  }
-
-  .image {
-    width: 100%;
-    display: block;
-  }
-
-  .clearfix:before,
-  .clearfix:after {
-    display: table;
-    content: "";
-  }
-
-  .clearfix:after {
-    clear: both
-  }
 
 </style>

@@ -102,7 +102,7 @@
 
 <style scoped>
   .el-content{
-    width: 1500px;
+    width: 1400px;
     height: 60px;
     margin: auto;
   }
