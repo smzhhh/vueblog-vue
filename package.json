@@ -15,7 +15,7 @@
     "element-ui": "^2.13.2",
     "github-markdown-css": "^4.0.0",
     "less-loader": "^4.1.0",
-    "markdown-it": "^11.0.0",
+    "markdown-it": "^12.3.2",
     "mavon-editor": "^2.9.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
